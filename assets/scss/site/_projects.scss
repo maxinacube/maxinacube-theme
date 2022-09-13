@@ -1,0 +1,28 @@
+.projects-grid {
+	.project {
+		&__inner {
+			display: flex;
+			flex-wrap: wrap;
+			height: 100%;
+			margin-bottom: .75rem;
+			padding-bottom: .75rem;
+			border-bottom: 1px solid;
+		}
+		
+		&__summary,
+		&__links {
+			flex: {
+				basis: 100%;
+				grow: 1;
+			};
+		}
+		
+		&__summary {
+			align-self: flex-start;
+		}
+		
+		&__links {
+			align-self: flex-end;
+		}
+	}
+}

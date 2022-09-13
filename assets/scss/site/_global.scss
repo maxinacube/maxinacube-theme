@@ -1,0 +1,42 @@
+/**
+ * 01. Structure
+ */
+
+
+// 01. Structure
+
+html, body {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+}
+
+body {
+	background: $lighter-gray;
+}
+
+#site {	
+	> section {
+		padding: 1.5rem;
+		
+		&.splash {
+			min-height: 100vh;
+		}
+		
+		&.intro + section {
+			padding: 3rem 1.5rem;
+		}
+	}
+
+	.splash {
+		background-image: linear-gradient( to bottom, lighten($lighter-gray, 50%), $lighter-gray 90% );
+		align-items: center;
+		justify-content: center;
+		display: flex;
+	}
+}

@@ -1,0 +1,47 @@
+/**
+ * 01. Base Grid
+ */
+
+// 01. Base Grid
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	
+	.cell {
+		flex: 1 1 auto;
+		padding: 0 .5rem;
+		
+		&.half {
+			flex: {
+				basis: 50%;
+				grow: 0;
+			};
+		}
+		
+		&.third {
+			flex: {
+				basis: 33.333%;
+				grow: 0;
+			};
+		}
+		
+		&.quarter {
+			flex: {
+				basis: 25%;
+				grow: 0;
+			};
+		}
+		
+		&.shrink {
+			flex-grow: 0;
+		}
+		
+		&.fill {
+			flex-grow: 1;
+		}
+	}
+}

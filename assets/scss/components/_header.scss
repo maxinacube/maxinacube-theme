@@ -1,0 +1,155 @@
+/**
+ * 01. Structure
+ * 02. Logo
+ * 03. Navigation
+ */
+
+
+// 01. Structure
+
+#header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	background: rgba($light-gray, 0);
+	border-bottom: 1px solid transparent;
+	height: 120px;
+	padding: 0 1.5rem;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	
+	@media #{$mobile_break} {
+		height: 80px;
+	}
+}
+
+
+// 02. Logo
+
+#maxinacube-logo {
+	height: clamp(180px, 25vw, 250px);
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	
+	pointer-events: none;
+}
+
+
+// 03. Navigation
+
+#menu-trigger {
+	cursor: pointer;
+	height: 14px;
+	width: 26px;
+	
+	position: relative;
+}
+
+.icon-menu {
+	background-color: $dark-gray;
+	display: block;
+	height: 2px;
+	width: 26px;
+	position: absolute;
+	z-index: 100;
+	
+	top: 50%;
+	margin-top: -1px;
+	
+	transition: 125ms background-color;
+
+	&:before,
+	&:after {
+		content: '';
+
+		display: block;
+		background: $dark-gray;
+		height: 2px;
+		width: 100%;
+
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -6px;
+		
+		transition: 250ms transform;
+	}
+	
+	&:after {
+		top: 6px;
+	}
+	
+	.menu-active & {
+		background-color: rgba($dark-gray, 0);
+		
+		&:before,
+		&:after {
+			transform: rotate(45deg);
+			transform-origin: center;
+			top: 0;
+		}
+		
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+#menu-container {
+	position: fixed;
+	background: lighten($lighter-gray, 50%);
+	border-left: 1px solid $black;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 50vw;
+	display: flex;
+	justify-content: flex-end;
+	padding: 132px 1.5rem 1.5rem 166px;
+	
+	transform: translateX(100%);
+	
+	transition: 250ms transform;
+	
+	.menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: right;
+		
+		a {
+			color: $dark-gray;
+			display: block;
+			font-size: 2rem;
+			margin: .5rem 0;
+			text-decoration: none;
+			
+			transition: 300ms text-shadow, 300ms color;
+			
+			&:hover {
+				text-shadow:
+					1px 1px 0px $gray,
+					2px 2px 0px darken($gray, 5%),
+					3px 3px 0px darken($gray, 10%),
+					4px 4px 0px darken($gray, 15%),
+					5px 5px 0px darken($gray, 20%)
+				;
+				color: lighten($lighter-gray, 50%);
+			}
+		}
+	}
+	
+	.menu-active & {
+		transform: translateX(0);
+	}
+	
+	@media #{$mobile_break} {
+		padding-top: 92px;
+	}
+}

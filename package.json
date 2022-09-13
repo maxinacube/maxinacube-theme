@@ -1,0 +1,130 @@
+{
+    "name": "@maxinacube/maxinacube",
+    "version": "1.0.0",
+    "main": "gulpfile.babel.js",
+    "scripts": {
+      "start": "gulp",
+      "build": "gulp build:production"
+    },
+    "author": "Maxinacube <maxinacube@gmail.com>",
+    "license": "proprietary",
+    "dependencies": {
+      "axios": "^0.27.2",
+      "core-js": "^3.25.0",
+      "dompurify": "^2.4.0",
+      "fs-extra": "^10.1.0",
+      "hc-sticky": "^2.2.7",
+      "lodash": "^4.17.21",
+      "webpack-cli": "^4.10.0"
+    },
+    "devDependencies": {
+      "@babel/core": "7.18.13",
+      "@babel/preset-env": "7.18.10",
+      "@babel/register": "7.18.9",
+      "autoprefixer": "^10.4.8",
+      "babel-loader": "8.2.5",
+      "chokidar": "3.5.3",
+      "gulp": "4.0.2",
+      "gulp-babel": "8.0.0",
+      "gulp-clean-css": "4.3.0",
+      "gulp-cli": "2.3.0",
+      "gulp-if": "3.0.0",
+      "gulp-postcss": "9.0.1",
+      "gulp-sass": "5.1.0",
+      "gulp-sourcemaps": "3.0.0",
+      "gulp-uglify": "3.0.2",
+      "postcss": "8.4.16",
+      "sass": "^1.54.8",
+      "sass-loader": "^13.0.2",
+      "webpack": "^5.74.0",
+      "webpack-stream": "7.0.0",
+      "yargs": "17.5.1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/maxinacube/maxinacube-theme.git"
+    },
+    "bugs": {
+      "url": "https://github.com/maxinacube/maxinacube-theme/issues",
+      "email": "maxinacube@gmail.com"
+    },
+    "engines": {
+      "node": ">=16.7.0"
+    },
+    "browserslist": [
+      "defaults"
+    ],
+    "resolutions": {
+      "chokidar": "3.5.2",
+      "minimist": "1.2.6",
+      "glob-parent": "5.1.2",
+      "trim-newlines": "3.0.1"
+    },
+    "private": true,
+    "buildconfig": {
+      "webpack": {
+        "entry": {
+          "maxinacube": "./assets/js/maxinacube.js"
+        },
+        "output": {
+          "filename": "[name].js"
+        },
+        "module": {
+          "rules": [
+            {
+              "test": "/\\.js$/",
+              "use": {
+                "loader": "babel-loader",
+                "options": {
+                  "presets": [
+                    "@babel/preset-env"
+                  ],
+                  "compact": false
+                }
+              }
+            },
+            {
+              "test": "/\\.s[ac]ss$/i",
+              "use": [
+                "style-loader",
+                "css-loader",
+                "sass-loader",
+                {
+                  "loader": "sass-loader",
+                  "options": {
+                    "sassOptions": {
+                      "quietDeps": true
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "externals": {
+          "jquery": "jQuery"
+        }
+      },
+      "gulp": {
+        "fonts": {
+          "assets": [
+            "./assets/fonts/**/*"
+          ],
+          "dest": "./css/fonts"
+        },
+        "sass": {
+          "assets": [
+            "assets/scss/**/*.scss"
+          ],
+          "compatibility": ">ie11",
+          "dest": "./css"
+        },
+        "javascript": {
+          "assets": "assets/js/**/*.js",
+          "libraries": [],
+          "dest": "./js"
+        }
+      }
+    }
+  }
+  
