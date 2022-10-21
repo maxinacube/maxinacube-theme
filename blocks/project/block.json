@@ -1,0 +1,19 @@
+{
+	"name": "maxinacube/project",
+	"title": "Project",
+	"description": "A custom project block.",
+	"style": [
+		"file:./project.css"
+	],
+	"category": "formatting",
+	"icon": "admin-comments",
+	"keywords": [
+		"project",
+		"maxinacube"
+	],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "project.php"
+	},
+	"align": "full"
+}

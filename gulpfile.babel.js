@@ -52,11 +52,11 @@ let sassConfig = {
 };
 
 /**
- * This happens every time a build starts.
- * Cleanup our javascript folder.
+ * Cleanup compiled assets.
  */
 const clean = ( done ) => {
 	fs.remove( 'js', done );
+	fs.remove( 'css', done );
 }
 
 
@@ -92,6 +92,10 @@ const watchChanges = () => {
 		series( buildSass )
 	);
 
+	watch(config.gulp.blockSass.blocks).on(
+		'all',
+		series(buildBlockSass)
+	);
 }
 
 
@@ -134,6 +138,31 @@ const buildSass = () => {
 }
 
 /**
+ * Build our Block Sass
+ *
+ * @since 1.0
+ *
+ * @return {*}
+ */
+const buildBlockSass = () => {
+
+	const postCssPlugins = [
+		// Autoprefixer
+		autoprefixer(),
+	].filter(Boolean);
+
+	return src(config.gulp.blockSass.blocks)
+		.pipe(sourcemaps.init())
+		.pipe(sass({
+			includePaths: config.gulp.blockSass.blocks
+		}).on('error', sass.logError))
+		.pipe(postcss(postCssPlugins))
+		.pipe(gif(!sassConfig.mode, sourcemaps.write()))
+	
+		.pipe(dest(config.gulp.blockSass.dest));
+}
+
+/**
  * In production, the file is minified
  *
  * @since 1.0
@@ -160,7 +189,8 @@ task('build:production',
 		setProductionMode,
 		clean,
 		javascript,
-		buildSass
+		buildSass,
+		buildBlockSass
 	)
 );
 
@@ -171,6 +201,7 @@ task( 'default',
 		clean,
 		javascript,
 		buildSass,
+		buildBlockSass,
 		parallel( watchChanges )
 	)
 );

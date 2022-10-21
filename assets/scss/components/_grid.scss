@@ -10,10 +10,10 @@
 	max-width: 1440px;
 	width: 100%;
 	margin: 0 auto;
+	gap: 2rem;
 	
 	.cell {
 		flex: 1 1 auto;
-		padding: 0 .5rem;
 		
 		&.half {
 			flex: {

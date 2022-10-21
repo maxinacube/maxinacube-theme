@@ -1,5 +1,22 @@
+@import '../../assets/scss/config/config';
+
 .projects-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -1rem;
+
 	.project {
+		flex: 1 1 100%;
+		padding: 0 1rem;
+
+		@media #{$large_desktop} {
+			flex: 0 0 33.333333%;
+		}
+
+		@media #{$small_desktop} {
+			flex: 0 0 50%;
+		}
+
 		&__inner {
 			display: flex;
 			flex-wrap: wrap;
@@ -8,7 +25,7 @@
 			padding-bottom: .75rem;
 			border-bottom: 1px solid;
 		}
-		
+
 		&__summary,
 		&__links {
 			flex: {
@@ -16,11 +33,11 @@
 				grow: 1;
 			};
 		}
-		
+
 		&__summary {
 			align-self: flex-start;
 		}
-		
+
 		&__links {
 			align-self: flex-end;
 		}

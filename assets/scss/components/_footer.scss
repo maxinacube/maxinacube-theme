@@ -1,0 +1,45 @@
+/**
+ * 01. Structure
+ * 02. Social Menu
+ */
+
+
+// 01. Structure
+
+#footer {
+	padding-bottom: 1rem;
+}
+
+
+// 02. Social Menu
+
+#menu-social {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	list-style: none;
+	margin: 0;
+
+	.menu-item {
+		a {
+			text-decoration: none;
+
+			&:before {
+				@include icon-font;
+			}
+		}
+
+		+ .menu-item {
+			margin-left: .75rem;
+		}
+	}
+}
+
+@each $network in $social-map {
+	.network-#{$network} a:before {
+		content: map-get($icons-map, $network);
+
+		margin-right: .25rem;
+	}
+}

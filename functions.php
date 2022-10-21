@@ -11,10 +11,9 @@ if ( ! defined( 'SCRIPT_DEBUG' ) ) {
 }
 
 require_once 'includes/maxinacube.php';
+require_once 'includes/maxinacube.cpt.php';
+require_once 'includes/maxinacube.blocks.php';
 
-// Kick everything off when plugins are loaded.
-try {
-    Maxinacube\Core\setup();
-} catch ( Exception $e ) {
-	wp_die( esc_html( $e->getMessage() ) );
-}
+$core = new Maxinacube();
+$cpt = new \Maxinacube\CPT();
+$blocks = new \Maxinacube\Blocks();

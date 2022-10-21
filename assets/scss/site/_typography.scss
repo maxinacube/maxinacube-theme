@@ -1,0 +1,35 @@
+/**
+ * 01. Paragraph
+ * 02. Heading
+ * 03. Link
+ */
+
+
+// 01. Paragraph
+
+p {
+	font-size: 1rem;
+	line-height: 1.3;
+}
+
+
+// 02. Heading
+
+@each $heading, $properties in $heading-properties {
+	#{$heading} {
+		@each $property, $value in $properties {
+			font-#{$property}: $value;
+		}
+	}
+}
+
+
+// 03. Link
+
+a {
+	color: $link;
+
+	&:hover {
+		color: $link-hover;
+	}
+}
