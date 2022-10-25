@@ -10,33 +10,53 @@
 $white: #ffffff;
 $lighter-gray: #e8e8e8;
 $light-gray: #d1d1d1;
+$medium-gray: #c8c8c8;
 $gray: #8b8b8b;
 $dark-gray: #2e2e2e;
 $black: #000000;
 
-$blue: #0096FF;
+$blue: #0096ff;
+$dark-blue: #006cff;
 
-$link: $dark-gray;
-$link-hover: $blue;
+$link: $blue;
+$link-hover: $dark-blue;
+
+$menu-icon: $blue;
+$menu-icon-hover: $blue;
+
+$button-base: $lighter-gray;
+$button-shade-1: $light-gray;
+$button-shade-2: $medium-gray;
+$button-color: $dark-blue;
 
 
 // 02. Fonts
 
-$noto: 'Noto Sans', Arial, sans-serif;
+$noto: 'Open Sans', Arial, sans-serif;
 $body: $noto;
 $heading: $noto;
 
 $heading-properties: (
-	'h1': ('weight': 600,
-		'size': clamp(26px, 20vw, 40px)),
-	'h2': ('weight': 400,
-		'size': clamp(22px, 20vw, 32px)),
-	'h3': ('weight': 400,
-		'size': clamp(18px, 20vw, 28px)),
-	'h4': ('weight': 400,
-		'size': clamp(16px, 20vw, 22px)),
-	'h5': ('weight': 400,
-		'size': clamp(14px, 20vw, 20px))
+	'h1': (
+		'weight': 700,
+		'size': clamp(26px, 20vw, 40px)
+	),
+	'h2': (
+		'weight': 600,
+		'size': clamp(22px, 20vw, 32px)
+	),
+	'h3': (
+		'weight': 500,
+		'size': clamp(18px, 20vw, 28px)
+	),
+	'h4': (
+		'weight': 400,
+		'size': clamp(16px, 20vw, 22px)
+	),
+	'h5': (
+		'weight': 400,
+		'size': clamp(14px, 20vw, 20px)
+	)
 );
 
 $icomoon-font-family: "maxinacube" !default;

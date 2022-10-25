@@ -1,5 +1,6 @@
 /**
  * 01. Icon Font
+ * 02. Button
  */
 
 
@@ -18,4 +19,70 @@
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+
+// 02. Button
+
+@mixin button(
+	$base: $button-base,
+	$shade-1: $button-shade-1,
+	$shade-2: $button-shade-2,
+	$color: $button-color
+) {
+	box-shadow: inset 0 0 0 1px $shade-1;
+	color: $color;
+	display: inline-block;
+	margin: 1rem 1rem 0 0;
+	padding: 0.75rem 1.5rem;
+	position: relative;
+	background: $base;
+	text-decoration: none;
+	white-space: nowrap;
+
+	text: {
+		decoration: none;
+		transform: uppercase;
+	};
+	font: {
+		size: 1.125rem;
+		weight: 600;
+	};
+
+	&:before,
+	&:after {
+		content: '';
+
+		position: absolute;
+	}
+
+	&:before {
+		bottom: 100%;
+		left: 4px;
+		right: -4px;
+		height: 8px;
+		background: $shade-2;
+		transform: skewX(-45deg);
+	}
+
+	&:after {
+		width: 8px;
+		height: 100%;
+		left: 100%;
+		top: -4px;
+		background: $shade-1;
+		transform: skewY(-45deg);
+	}
+
+	&:hover {
+		background: darken($base, 3%);
+
+		&:before {
+			background: darken($shade-2, 3%);
+		}
+
+		&:after {
+			background: darken($shade-1, 3%);
+		}
+	}
 }

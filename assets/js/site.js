@@ -43,7 +43,7 @@ export default function site() {
 	});
 
 	gsap.to('header', {
-		backgroundColor: 'rgba(209, 209, 209, 0.95)',
+		backgroundColor: 'rgba(240, 240, 240, 0.95)',
 		borderColor: '#000000',
 		scrollTrigger: {
 			trigger: '#intro',

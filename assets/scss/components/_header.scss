@@ -8,6 +8,11 @@
 // 01. Structure
 
 #header {
+	// Frontpage
+	body.home & {
+		position: fixed;
+	}
+	
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
@@ -15,9 +20,10 @@
 	background: rgba($light-gray, 0);
 	border-bottom: 1px solid transparent;
 	height: 120px;
+	margin-bottom: 3rem;
 	padding: 0 1.5rem;
 
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -38,7 +44,10 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 	
-	pointer-events: none;
+	// Front-page
+	body.home & {
+		pointer-events: none;
+	}
 }
 
 
@@ -53,7 +62,7 @@
 }
 
 .icon-menu {
-	background-color: $dark-gray;
+	background-color: $menu-icon;
 	display: block;
 	height: 2px;
 	width: 26px;
@@ -70,7 +79,7 @@
 		content: '';
 
 		display: block;
-		background: $dark-gray;
+		background: $menu-icon;
 		height: 2px;
 		width: 100%;
 
@@ -87,7 +96,7 @@
 	}
 	
 	.menu-active & {
-		background-color: rgba($dark-gray, 0);
+		background-color: rgba($menu-icon, 0);
 		
 		&:before,
 		&:after {
@@ -125,7 +134,7 @@
 		text-align: right;
 		
 		a {
-			color: $dark-gray;
+			color: $menu-icon;
 			display: block;
 			font-size: 2rem;
 			margin: .5rem 0;
@@ -135,11 +144,11 @@
 			
 			&:hover {
 				text-shadow:
-					1px 1px 0px $gray,
-					2px 2px 0px darken($gray, 5%),
-					3px 3px 0px darken($gray, 10%),
-					4px 4px 0px darken($gray, 15%),
-					5px 5px 0px darken($gray, 20%)
+					1px 1px 0px $menu-icon-hover,
+					2px 2px 0px $menu-icon-hover,
+					3px 3px 0px $menu-icon-hover,
+					4px 4px 0px $menu-icon-hover,
+					5px 5px 0px $menu-icon-hover
 				;
 				color: lighten($lighter-gray, 50%);
 			}

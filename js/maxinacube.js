@@ -61,7 +61,7 @@ function site() {
 	});
 
 	gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to('header', {
-		backgroundColor: 'rgba(209, 209, 209, 0.95)',
+		backgroundColor: 'rgba(240, 240, 240, 0.95)',
 		borderColor: '#000000',
 		scrollTrigger: {
 			trigger: '#intro',

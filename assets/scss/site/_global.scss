@@ -19,9 +19,24 @@ html, body {
 
 body {
 	background: $lighter-gray;
+
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	#header,
+	#footer {
+		flex: 0 0 auto;
+	}
+
+	#site {
+		flex: 1 1 auto;
+	}
 }
 
-#site {	
+#site {
+	// min-height: 90vh;
+
 	> section {
 		padding: 1.5rem;
 		

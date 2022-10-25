@@ -50,7 +50,8 @@ class Maxinacube {
 	 * @return void
 	 */
 	function styles() {
-		wp_enqueue_style( 'maxinacube-css', get_stylesheet_directory_uri() . '/css/maxinacube.css', [], MAXINACUBE_VERSION );
+		wp_enqueue_style( 'font-open-sans', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap' );
+		wp_enqueue_style( 'maxinacube-css', get_stylesheet_directory_uri() . '/css/maxinacube.css', [ 'font-open-sans' ], MAXINACUBE_VERSION );
 	}
 	
 	/**
@@ -59,6 +60,7 @@ class Maxinacube {
 	 * @return void
 	 */
 	function admin_styles() {
+		add_editor_style( 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap' );
 		add_editor_style( 'css/maxinacube.css' );
 	}
 }

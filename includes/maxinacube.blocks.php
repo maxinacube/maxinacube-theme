@@ -32,6 +32,7 @@ class Blocks {
 		}
 
 		$project_data = [
+			'id'           => (int) $post_id,
 			'project_meta' => get_fields( $post_id ),
 			'title'        => get_the_title( $post_id ),
 			'excerpt'      => get_the_excerpt( $post_id ),

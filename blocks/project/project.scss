@@ -25,13 +25,19 @@
 			padding-bottom: .75rem;
 			border-bottom: 1px solid;
 		}
-
+		
+		&__image-container,
 		&__summary,
 		&__links {
 			flex: {
 				basis: 100%;
 				grow: 1;
 			};
+		}
+
+		&__image {
+			height: auto;
+			width: 100%;
 		}
 
 		&__summary {
