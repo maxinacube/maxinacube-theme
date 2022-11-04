@@ -41,18 +41,4 @@ class Blocks {
 
 		return $project_data;
 	}
-	
-	public static function get_project_title( $post_id = 0, $echo = true ) {
-		if ( ! $post_id ) {
-			return;
-		}
-	
-		$title = get_the_title( $post_id );
-	
-		if ( ! $echo ) {
-			return $title;
-		}
-	
-		echo $title;
-	}
 }

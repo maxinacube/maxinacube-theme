@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="project__links">
-			<p>
+			<p class="is-auto-container">
 				<a class="button" href="<?php echo esc_url( $data['permalink'] ); ?>">
 					<?php echo esc_html__( 'More Details', 'maxinacube' ); ?>
 				</a>

@@ -14,12 +14,18 @@ class Maxinacube {
 	 */
 	
 	public function __construct() {
+		add_filter( 'upload_mimes',       [ $this, 'upload_mimes' ] );
 		add_action( 'after_setup_theme',  [ $this, 'theme_setup' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'styles' ] );
 		add_action( 'admin_init',         [ $this, 'admin_styles' ] );
 	}
-	
+
+	function upload_mimes( $mimes ){
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
+	  }
+
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 */

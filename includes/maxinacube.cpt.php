@@ -1,6 +1,6 @@
 <?php
 /**
- * Maxinacube Custom Post Types
+ * Maxinacube Custom Post Types, Taxonomies, and related utility functions
  *
  * @author  maxinacube
  * @package Maxinacube
@@ -16,7 +16,8 @@ class CPT {
 	 */
 	
 	public function __construct() {
-		add_action( 'init',  [ $this, 'register_project_cpt' ] );
+		add_action( 'init', [ $this, 'register_project_cpt' ] );
+		add_action( 'init', [ $this, 'register_project_taxonomies' ] );
 	}
 	
 	/**
@@ -61,5 +62,63 @@ class CPT {
 		];
 	
 		register_post_type( 'project', $args );
+	}
+
+	function register_project_taxonomies() {
+		// Taxonomy for tools
+		$tools_labels = array(
+			'name'                       => _x( 'Tools', 'taxonomy general name', 'maxinacube' ),
+			'singular_name'              => _x( 'Tool', 'taxonomy singular name', 'maxinacube' ),
+			'search_items'               => __( 'Search Tools', 'maxinacube' ),
+			'popular_items'              => __( 'Popular Tools', 'maxinacube' ),
+			'all_items'                  => __( 'All Tools', 'maxinacube' ),
+			'parent_item'                => null,
+			'parent_item_colon'          => null,
+			'edit_item'                  => __( 'Edit Tool', 'maxinacube' ),
+			'update_item'                => __( 'Update Tool', 'maxinacube' ),
+			'add_new_item'               => __( 'Add New Tool', 'maxinacube' ),
+			'new_item_name'              => __( 'New Tool Name', 'maxinacube' ),
+			'separate_items_with_commas' => __( 'Separate Tools with commas', 'maxinacube' ),
+			'add_or_remove_items'        => __( 'Add or remove Tools', 'maxinacube' ),
+			'choose_from_most_used'      => __( 'Choose from the most used Tools', 'maxinacube' ),
+			'not_found'                  => __( 'No Tools found.', 'maxinacube' ),
+			'menu_name'                  => __( 'Tools', 'maxinacube' ),
+		);
+
+		$tools_args = [
+			'labels'        => $tools_labels,
+			'show_in_rest'  => true,
+        	'rewrite'       => array( 'slug' => 'tools' ),
+		];
+
+		register_taxonomy( 'tools', 'project', $tools_args );
+
+		// Taxonomy for collaborators
+		$collaborators_labels = array(
+			'name'                       => _x( 'Collaborators', 'taxonomy general name', 'maxinacube' ),
+			'singular_name'              => _x( 'Collaborator', 'taxonomy singular name', 'maxinacube' ),
+			'search_items'               => __( 'Search Collaborators', 'maxinacube' ),
+			'popular_items'              => __( 'Popular Collaborators', 'maxinacube' ),
+			'all_items'                  => __( 'All Collaborators', 'maxinacube' ),
+			'parent_item'                => null,
+			'parent_item_colon'          => null,
+			'edit_item'                  => __( 'Edit Collaborator', 'maxinacube' ),
+			'update_item'                => __( 'Update Collaborator', 'maxinacube' ),
+			'add_new_item'               => __( 'Add New Collaborator', 'maxinacube' ),
+			'new_item_name'              => __( 'New Collaborator Name', 'maxinacube' ),
+			'separate_items_with_commas' => __( 'Separate Collaborators with commas', 'maxinacube' ),
+			'add_or_remove_items'        => __( 'Add or remove Collaborators', 'maxinacube' ),
+			'choose_from_most_used'      => __( 'Choose from the most used Collaborators', 'maxinacube' ),
+			'not_found'                  => __( 'No Collaborators found.', 'maxinacube' ),
+			'menu_name'                  => __( 'Collaborators', 'maxinacube' ),
+		);
+
+		$collaborators_args = [
+			'labels'        => $collaborators_labels,
+			'show_in_rest'  => true,
+        	'rewrite'       => array( 'slug' => 'collaborators' ),
+		];
+
+		register_taxonomy( 'collaborators', 'project', $collaborators_args );
 	}
 }

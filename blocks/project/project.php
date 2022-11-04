@@ -29,7 +29,7 @@ if ( ! empty( $block['align'] ) ) {
 }
 
 // Load values and assign defaults.
-$projects = get_field( 'projects' ) ?: 'Your testimonial here...';
+$projects = get_field( 'projects' ) ?: '';
 
 ?>
 <div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); ?>">

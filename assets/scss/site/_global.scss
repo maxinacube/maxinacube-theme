@@ -1,5 +1,6 @@
 /**
  * 01. Structure
+ * 02. Helpers
  */
 
 
@@ -54,5 +55,25 @@ body {
 		align-items: center;
 		justify-content: center;
 		display: flex;
+	}
+}
+
+
+
+// 02. Helpers
+
+.is-auto-container {
+	display: flex;
+
+	> * {
+		flex: 1 1 auto;
+	}
+}
+
+.is-shrink-container {
+	display: flex;
+	
+	> * {
+		flex: 0 0 auto;
 	}
 }
