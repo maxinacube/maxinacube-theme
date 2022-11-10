@@ -1,3 +1,20 @@
+/**
+ * 01. Project Sidebar
+ * 02. Project Meta Data
+ */
+
+
+// 01. Project Sidebar
+
+.single-project-sidebar {
+	min-height: 100px;
+	position: sticky;
+	top: calc($header-height + 1rem);
+}
+
+
+// 02. Project Meta Data
+
 .project-data {
 	&__section {
 		border-bottom: 1px solid $medium-gray;

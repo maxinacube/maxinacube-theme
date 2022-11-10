@@ -51,7 +51,7 @@ class Utils {
 			$icon = get_field( 'tool_icon', $term );
 
 			if ( $icon ) {
-				$output .= '<img src="' . $icon['url'] . '" />';
+				$output .= '<img alt="' . $term->name . ' Logo" src="' . $icon['url'] . '" />';
 			}
 		}
 		
@@ -59,7 +59,7 @@ class Utils {
 			$icon = get_field( 'collaborator_icon', $term );
 			$link = get_field( 'collaborator_link', $term );
 
-			$output .= '<a href="' . $link . '" target="_blank" rel="nofollow"><img src="' . $icon['url'] . '" /></a>';
+			$output .= '<a href="' . $link . '" target="_blank" rel="nofollow"><img alt="' . $term->name . ' Logo" src="' . $icon['url'] . '" /></a>';
 		}
 
 		echo $output;

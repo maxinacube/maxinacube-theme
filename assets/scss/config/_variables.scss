@@ -2,6 +2,7 @@
  * 01. Colors
  * 02. Fonts
  * 03. Breakpoints
+ * 04. Header
  */
 
 
@@ -64,15 +65,21 @@ $icomoon-font-path: "../assets/fonts" !default;
 
 $icon-instagram: "\ea92";
 $icon-twitter: "\ea96";
+$icon-github: "\eab0";
+$icon-wordpress: "\eab4";
 $icon-codepen: "\eae8";
+$icon-new-tab: "\ea7e";
 
 $icons-map: (
 	'instagram': $icon-instagram,
 	'twitter': $icon-twitter,
-	'codepen': $icon-codepen
+	'codepen': $icon-codepen,
+	'github': $icon-github,
+	'wordpress': $icon-wordpress,
+	'new-tab': $icon-new-tab
 );
 
-$social-map: 'twitter', 'instagram', 'codepen';
+$social-map: 'twitter', 'instagram', 'codepen', 'github', 'wordpress';
 
 
 // 03. Breakpoints
@@ -80,3 +87,9 @@ $social-map: 'twitter', 'instagram', 'codepen';
 $large_desktop: 'screen and (min-width: 1121px)';
 $small_desktop: 'screen and (min-width: 769px) and (max-width: 1120px)';
 $mobile_break: 'screen and (max-width: 768px)';
+
+
+// 04. Header
+
+$header-height: 120px;
+$header-height-mobile: 80px;

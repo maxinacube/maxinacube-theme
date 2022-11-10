@@ -16,6 +16,7 @@
     "gsap": "^3.11.3",
     "hc-sticky": "^2.2.7",
     "lodash": "^4.17.21",
+    "swiper": "^8.4.4",
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
@@ -120,13 +121,13 @@
         "compatibility": ">ie11",
         "dest": "./css"
       },
-	  "blockSass": {
-		"blocks": [
-			"blocks/**/*.scss"
-		],
-		"compatibility": ">ie11",
-		"dest": "./blocks"
-	  },
+      "blockSass": {
+        "blocks": [
+          "blocks/**/*.scss"
+        ],
+        "compatibility": ">ie11",
+        "dest": "./blocks"
+      },
       "javascript": {
         "assets": "assets/js/**/*.js",
         "libraries": [],

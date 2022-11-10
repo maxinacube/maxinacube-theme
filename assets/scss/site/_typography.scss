@@ -32,4 +32,8 @@ a {
 	&:hover {
 		color: $link-hover;
 	}
+
+	&.plain {
+		text-decoration: none;
+	}
 }

@@ -10,13 +10,13 @@ $post_id = get_the_ID();
 
 <?php get_header(); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="grid">
+		<div class="grid single-title-container">
 			<div class="cell">
 				<?php the_title( '<h1>', '</h1>' ); ?>
 			</div>
 		</div>
 
-		<div class="grid">
+		<div class="grid single-content-container">
 			<div class="cell auto">
 				<?php the_content(); ?>
 			</div>
