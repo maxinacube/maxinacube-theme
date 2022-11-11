@@ -48,5 +48,15 @@
 		&.fill {
 			flex-grow: 1;
 		}
+
+		@media #{$mobile_break} {
+			flex: 1 1 100% !important;
+
+			@for $i from 1 through 3 {
+				&.mobile-order-#{$i} {
+					order: $i;
+				}
+			}
+		}
 	}
 }

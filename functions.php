@@ -1,6 +1,6 @@
 <?php
 
-define( 'MAXINACUBE_VERSION', '1.0.0' );
+define( 'MAXINACUBE_VERSION', '1.0.1' );
 define( 'MAXINACUBE_FILE', get_stylesheet() );
 define( 'MAXINACUBE_NAME', esc_html__( 'Maxinacube', 'maxinacube' ) );
 define( 'MAXINACUBE_URL', get_stylesheet_directory_uri() );

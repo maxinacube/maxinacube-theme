@@ -47,6 +47,11 @@
 	left: 50%;
 	top: 10px;
 	transform: translate(-50%, 0);
+
+	@media #{$mobile_break} {
+		height: 100px;
+		top: 5px;
+	}
 	
 	// Front-page
 	body.home & {

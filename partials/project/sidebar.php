@@ -7,11 +7,11 @@ $data_sections = [ 'project_url', 'tools', 'collaborators' ];
 ?>
 
 <?php if ( ! empty( $project_data ) ) : ?>
-	<div class="cell third single-project-sidebar-container">
+	<div class="cell third single-project-sidebar-container mobile-order-1">
 		<div class="single-project-sidebar">
 			<?php foreach ( $data_sections as $data_section ) : ?>
 				<?php if ( $section = $project_data[$data_section] ) : ?>
-					<div class="project-data__section">
+					<div class="project-data__section <?php echo esc_attr( $data_section ); ?>">
 						<?php if ( 'project_url' === $data_section ) : ?>
 							<p><a class="plain" href="<?php echo esc_url( $section ); ?>" target="_blank" rel="nofollow"><?php echo esc_html__( 'View Project', 'maxinacube' ); ?> <span class="icon-new-tab"></span></a></p>
 							

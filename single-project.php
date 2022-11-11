@@ -17,7 +17,7 @@ $post_id = get_the_ID();
 		</div>
 
 		<div class="grid single-content-container">
-			<div class="cell auto">
+			<div class="cell auto mobile-order-2">
 				<?php the_content(); ?>
 			</div>
 			
