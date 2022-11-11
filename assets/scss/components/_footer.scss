@@ -26,16 +26,17 @@
 	.menu-item {
 		a {
 			text-decoration: none;
-
-			&:before {
-				@include icon-font;
-			}
 		}
 
 		+ .menu-item {
 			margin-left: .75rem;
 		}
 	}
+}
+
+.wp-block-navigation-item a:before,
+.menu-item a:before {
+	@include icon-font;
 }
 
 @each $network in $social-map {

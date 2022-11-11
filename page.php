@@ -7,7 +7,17 @@
 ?>
 
 <?php get_header(); ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php the_content(); ?>
-	<?php endwhile; ?>
+<div class="grid">
+	<div class="cell fill">
+		<?php the_title( '<h1>', '</h1>' ); ?>
+	</div>
+</div>
+
+<div class="grid">
+	<div class="cell fill">
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php the_content(); ?>
+		<?php endwhile; ?>
+	</div>
+</div>
 <?php get_footer();
