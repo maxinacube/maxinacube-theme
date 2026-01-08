@@ -77,25 +77,18 @@ $font-size-desktop-heading-6: var(--wp--custom--font-size--desktop--heading-6);
 /* Colors - Mono. */
 $color-black: var(--wp--preset--color--black);
 $color-dark: var(--wp--preset--color--dark);
-$color-dark-grey: var(--wp--preset--color--dark-grey);
 $color-grey: var(--wp--preset--color--grey);
-$color-grey-light: var(--wp--preset--color--grey-light);
 $color-white: var(--wp--preset--color--white);
 
-/* Colors - Colored. */
-$color-green: var(--wp--preset--color--green);
-$color-purple: var(--wp--preset--color--purple);
-$color-orange: var(--wp--preset--color--orange);
-
 /* Colors - Theme colors. */
-$color-primary: $color-green;
-$color-secondary: $color-purple;
-$color-link: $color-orange;
-$color-background: $color-black;
-$color-body: $color-white;
+$color-primary: $color-black;
+$color-secondary: $color-white;
+$color-link: $color-dark;
+$color-background: $color-white;
+$color-body: $color-black;
 
 /* Colors - Input fields - Light background. */
-$color-input-bg-light-border: $color-dark-grey;
+$color-input-bg-light-border: $color-grey;
 $color-input-bg-light-text: $color-dark;
 $color-input-bg-light-disabled: $color-grey;
 $color-input-bg-light-background: transparent;
@@ -103,7 +96,7 @@ $color-input-bg-light-background: transparent;
 /* Colors - Input fields - Dark background. */
 $color-input-bg-dark-border: $color-white;
 $color-input-bg-dark-text: $color-white;
-$color-input-bg-dark-disabled: $color-dark-grey;
+$color-input-bg-dark-disabled: $color-grey;
 $color-input-bg-dark-background: transparent;
 
 /* Responsive breakpoints. */

@@ -7,6 +7,7 @@
 
 namespace MaxinacubeTheme;
 
+use MaxinacubeTheme\PostTypes\PostTypeServiceProvider;
 use MaxinacubeTheme\Rest\RestServiceProvider;
 use MaxinacubeTheme\Theme\ThemeServiceProvider;
 
@@ -14,6 +15,7 @@ use MaxinacubeTheme\Theme\ThemeServiceProvider;
  * App class
  */
 class App {
+	public const META_KEY_PREFIX = '_maxinacube_';
 
 	public const REST_API_CUSTOM_NAMESPACE = 'maxinacube/v1';
 
@@ -28,6 +30,7 @@ class App {
 	 * @var array
 	 */
 	public static array $providers = [
+		PostTypeServiceProvider::class,
 		RestServiceProvider::class,
 		ThemeServiceProvider::class,
 	];

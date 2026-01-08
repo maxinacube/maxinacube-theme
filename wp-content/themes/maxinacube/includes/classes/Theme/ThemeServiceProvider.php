@@ -19,7 +19,9 @@ class ThemeServiceProvider {
 	 * @var array
 	 */
 	public static array $services = [
+		ThemeFilters::class,
 		ThemeOptions::class,
+		ThemeRequiredPatterns::class,
 	];
 
 	/**

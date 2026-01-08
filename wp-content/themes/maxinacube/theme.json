@@ -24,45 +24,20 @@
           "color": "#211d1e"
         },
         {
-          "name": "Dark Grey",
-          "slug": "dark-grey",
-          "color": "#4a4a4a"
-        },
-        {
           "name": "Grey",
           "slug": "grey",
           "color": "#7f7f7f"
         },
         {
-          "name": "Grey Light",
-          "slug": "grey-light",
-          "color": "#fbfbfb"
-        },
-        {
           "name": "White",
           "slug": "white",
           "color": "#fff"
-        },
-        {
-          "name": "Green",
-          "slug": "green",
-          "color": "#00e8cc"
-        },
-        {
-          "name": "Purple",
-          "slug": "purple",
-          "color": "#ab71ff"
-        },
-        {
-          "name": "Orange",
-          "slug": "orange",
-          "color": "#fb3"
         }
       ]
     },
     "custom": {
       "typography": {
-        "fontFamily": "Futura PT, Arial"
+        "fontFamily": "var(--wp--preset--font-family--outfit)"
       },
       "layout": {
         "contentSize": "1420px"
@@ -105,6 +80,40 @@
       "customFontSize": false,
       "lineHeight": false,
       "dropCap": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Outfit\", sans-serif",
+          "name": "Outfit",
+          "slug": "outfit",
+          "fontFace": [
+            {
+              "fontFamily": "Outfit",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": [
+                "file:./static/fonts/Outfit/Outfit-VariableFont_wght.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Arvo\", serif",
+          "name": "Arvo",
+          "slug": "arvo",
+          "fontFace": [
+            {
+              "fontFamily": "Arvo",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": [
+                "file:./static/fonts/Arvo/Arvo-Regular.woff2"
+              ]
+            }
+          ]
+        }
+      ],
       "fontSizes": [
         {
           "name": "Small",
@@ -147,7 +156,15 @@
       "h6": {},
       "link": {}
     },
-    "typography": {},
-    "blocks": {}
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--outfit)"
+    },
+    "blocks": {
+      "core/code": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--arvo"
+        }
+      }
+    }
   }
 }
