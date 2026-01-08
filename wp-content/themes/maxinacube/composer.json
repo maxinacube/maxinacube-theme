@@ -1,0 +1,22 @@
+{
+  "name": "rareview/maxinacube",
+  "description": "WordPress theme for Maxinacube by Rareview",
+  "type": "wordpress-theme",
+  "authors": [
+    {
+      "name": "Rareview",
+      "email": "hello@rareview.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "autoload": {
+    "psr-4": {
+      "MaxinacubeTheme\\": "includes/classes/"
+    }
+  }
+}
