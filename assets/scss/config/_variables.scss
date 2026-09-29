@@ -33,9 +33,9 @@ $button-color: $blue;
 
 // 02. Fonts
 
-$arial: Arial, sans-serif;
-$body: $arial;
-$heading: $arial;
+$open-sans: 'Open Sans', Arial, sans-serif;
+$body: $open-sans;
+$heading: $open-sans;
 
 $heading-properties: (
 	'h1': (
