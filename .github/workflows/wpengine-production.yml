@@ -36,3 +36,4 @@ jobs:
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           WPE_ENV: ${{ secrets.WPE_ENV }}
           REMOTE_PATH: wp-content/themes/maxinacube/
+          FLAGS: -azvr --inplace --exclude=.* --exclude=node_modules
