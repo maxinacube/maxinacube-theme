@@ -56,9 +56,9 @@
 			"customFontSize": false,
 			"fontFamilies": [
 				{
-					"fontFamily": "Open Sans, Arial, sans-serif",
-					"slug": "open-sans",
-					"name": "Open Sans"
+					"fontFamily": "Arial, sans-serif",
+					"slug": "arial",
+					"name": "Arial"
 				}
 			]
 		},
