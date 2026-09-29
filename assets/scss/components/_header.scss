@@ -147,7 +147,7 @@
 		text-align: right;
 		
 		a {
-			color: $menu-icon;
+			color: $link;
 			display: block;
 			font-size: 2rem;
 			margin: .5rem 0;
@@ -157,11 +157,11 @@
 			
 			&:hover {
 				text-shadow:
-					1px 1px 0px $menu-icon-hover,
-					2px 2px 0px $menu-icon-hover,
-					3px 3px 0px $menu-icon-hover,
-					4px 4px 0px $menu-icon-hover,
-					5px 5px 0px $menu-icon-hover
+					1px 1px 0px $link,
+					2px 2px 0px $link,
+					3px 3px 0px $link,
+					4px 4px 0px $link,
+					5px 5px 0px $link
 				;
 				color: lighten($lighter-gray, 50%);
 			}

@@ -234,7 +234,7 @@ body.home #maxinacube-logo {
   text-align: right;
 }
 #menu-container .menu a {
-  color: #0096ff;
+  color: #343434;
   display: block;
   font-size: 2rem;
   margin: 0.5rem 0;
@@ -242,7 +242,7 @@ body.home #maxinacube-logo {
   transition: 300ms text-shadow, 300ms color;
 }
 #menu-container .menu a:hover {
-  text-shadow: 1px 1px 0px #0096ff, 2px 2px 0px #0096ff, 3px 3px 0px #0096ff, 4px 4px 0px #0096ff, 5px 5px 0px #0096ff;
+  text-shadow: 1px 1px 0px #343434, 2px 2px 0px #343434, 3px 3px 0px #343434, 4px 4px 0px #343434, 5px 5px 0px #343434;
   color: white;
 }
 .menu-active #menu-container {
@@ -497,7 +497,7 @@ h5 {
 }
 
 a {
-  color: #0096ff;
+  color: #343434;
 }
 a:hover {
   color: #006cff;
